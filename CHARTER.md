@@ -12,6 +12,8 @@ Three signals result, and they are meant to work together. Certification establi
 
 The unit of concern is the agentic solution, not only the company that sells it. Certification attaches to organizations, but what an end user actually adopts and must trust is a specific solution: a product, a capability within a product, a composed system, or a delivered implementation. Criteria that assess only the organization will not tell an end user whether the thing in front of them is trustworthy.
 
+Agentic solutions are also built on agent platforms, and the two are not assessed the same way. A solution is what an end user adopts. A platform is the layer a solution is built and run on, and it sets the ceiling on what safety and security the solutions above it can achieve. A solution cannot expose an audit trail its platform does not produce, or enforce an authority boundary its platform does not support. The relevant question for a platform is therefore not whether it governs agents itself, but whether it exposes the primitives that make safety, security, and enterprise governance possible: identity, scoped and revocable permission, observability, and control over agent behavior at runtime. Assessing a platform against solution criteria will miss this, and assessing a solution without regard to its platform will credit it with properties it cannot actually deliver.
+
 The population remains MACH Alliance membership. This group is not defining criteria for the whole market, but changing how member organizations and their solutions are assessed and represented.
 
 The mission is end-user trust. That framing sets the bar: a criterion earns its place only if it distinguishes a trustworthy agentic solution from an untrustworthy one in a way an end user would care about.
@@ -23,6 +25,7 @@ Other working groups in the [Agent Ecosystem](https://github.com/machalliance/ag
 - Assess where current certification criteria fall short when applied to agentic capabilities
 - Define what distinguishes a trustworthy agentic solution, and the vendor or service provider behind it, from a non-agentic one
 - Revise and extend criteria so agentic capabilities are assessed on evidence rather than claims
+- Distinguish what is assessed of an agent platform from what is assessed of a solution built on one, so a platform is judged on the primitives it exposes rather than on governance it is not the right layer to perform
 - Keep criteria assessable: each must be verifiable by a certification reviewer within a realistic review process
 
 ### 2. Discovery and Comparison
@@ -47,7 +50,9 @@ Examples below illustrate the types of challenges this working group seeks to ex
 - What evidence should be required to demonstrate an agentic capability, given that behavior is probabilistic and cannot be verified by inspection alone?
 - How should a solution disclose what its agents are permitted to do, what data they access, and what actions they can take without human approval?
 - What should be exposed so a customer can reconstruct what an agent did and why?
-- Where does accountability sit when an agentic solution is composed from a vendor's product, a third-party model, an integrator's implementation, and a customer's own configuration?
+- Where does accountability sit when an agentic solution is composed from an agent platform, a vendor's product, a third-party model, an integrator's implementation, and a customer's own configuration?
+- What must an agent platform expose so that the solutions built on it, and the enterprises running them, can establish identity, scope and revoke permission, observe behavior, and constrain agents at runtime?
+- How is a solution assessed when the properties an end user cares about are determined by a platform its vendor does not control?
 - What must a solution provide so that a customer retains meaningful control: authority boundaries, approval thresholds, kill switches, and the ability to constrain autonomy?
 - How should service providers, as distinct from technology vendors, be assessed on their ability to deliver agentic solutions responsibly?
 - Where an agentic solution spans several organizations, what is certified, and how far does that signal extend?
@@ -75,7 +80,7 @@ Criteria for the 2027 Agent Ready award, recognizing those that support end user
 
 The working group's task is therefore to determine what the 2027 criteria should require that the 2026 criteria did not. The 2026 bar was, in essence, evidence of production agentic capability. As that becomes common, the bar has to move toward what distinguishes solutions that end users can actually trust and adopt, which is the same question the certification criteria are being revised to answer. The criteria are revised annually, so each cycle should raise the bar deliberately, and a capability that distinguishes a recipient one year is a candidate to become a baseline certification expectation in a later one.
 
-The revision covers all membership categories the award spans, currently independent software vendors, system integrators, and enablers and infrastructure providers, and should state how a category's criteria differ and why. The 2027 criteria must be final in time to evaluate candidates and make awards in early 2027, which sets the working backward date for the first cycle.
+The revision covers all membership categories the award spans, currently independent software vendors, system integrators, and enablers and infrastructure providers, and should state how a category's criteria differ and why. Enablers and infrastructure providers are largely where agent platforms sit, and the criteria for that category should turn on the primitives a platform exposes to the solutions and enterprises above it. The 2027 criteria must be final in time to evaluate candidates and make awards in early 2027, which sets the working backward date for the first cycle.
 
 ### 4. Agent Solutions Hub Validation Criteria
 
